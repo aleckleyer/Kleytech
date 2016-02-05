@@ -11,6 +11,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="main.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="userblack.png"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,7 +84,7 @@
                 	<h3>Research</h3>
                 	<hr>
                 	<h4><i>Game Theory</i></h4>
-                	<p>Worked directly with my Mathematics Professor Kevin O’Bryant to develop an algorithm in Wolfram Mathematica to analyze and simplify combinatorial games.</p>
+                	<p>Worked directly with Professor Kevin O’Bryant to develop an algorithm in Wolfram Mathematica to analyze and simplify combinatorial games.</p>
                 </div>
             </div>
         </div>
@@ -157,7 +158,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-offset-4 col-sm-4 col-sm-offset-4">
+                <div class="col-sm-offset-2 col-sm-4 ">
                     <div class="thumbnail">
                			<div class="caption">
                     		<h4>IRentTLC</h4>
@@ -165,6 +166,16 @@
                     			<p>	<a href="http://irenttlc.com" class="label label-danger" target="_blank" rel="tooltip" title="Visit">Visit Page</a></p>
                		 	</div>
                 		<img src="IRentTLC.png" alt="...">
+            		</div>    
+                </div>
+                <div class="col-sm-4 ">
+                    <div class="thumbnail">
+               			<div class="caption">
+                    		<h4>KSPowerlifting</h4>
+                    			<p>Powerlifting information hub</p>
+                    			<p>	<a href="http://kspowerlifting.com" class="label label-danger" target="_blank" rel="tooltip" title="Visit">Visit Page</a></p>
+               		 	</div>
+                		<img src="kspowerlifting.png" alt="...">
             		</div>    
                 </div>
             </div>
@@ -209,32 +220,32 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form name="sentMessage" id="contactForm" novalidate="">
+                    <form name="sentMessage" id="contactForm" method="post" action="sendMessage.php">
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name" required="" data-validation-required-message="Please enter your name.">
+                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" required="" data-validation-required-message="Please enter your name.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email" required="" data-validation-required-message="Please enter your email address.">
+                                <input type="email" class="form-control" placeholder="Email Address" name="email" id="email" required="" data-validation-required-message="Please enter your email address.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required="" data-validation-required-message="Please enter your phone number.">
+                                <input type="tel" class="form-control" placeholder="Phone Number" id="phone" name="phone" required="" data-validation-required-message="Please enter your phone number.">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message" required="" data-validation-required-message="Please enter a message."></textarea>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" name="message" required="" data-validation-required-message="Please enter a message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -242,7 +253,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-default btn-lg" id="contactSubmit">Send</button>
+                                <button type="submit" name="formSubmit" class="btn btn-default btn-lg" id="contactSubmit">Send</button>
                             </div>
                         </div>
                     </form>
@@ -250,6 +261,7 @@
             </div>
         </div>
     </section>
+        
     <footer class="container">
     	<div class="row">
     		<div class="col-md-3">
